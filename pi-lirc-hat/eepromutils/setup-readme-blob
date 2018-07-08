@@ -1,0 +1,36 @@
+(1)To use this HAT, you have to install LIRC:
+sudo apt-get install lirc
+
+(2)If there is a /etc/lirc/hardware.conf, change it to this:
+# /etc/lirc/hardware.conf
+#
+# Arguments which will be used when launching lircd
+LIRCD_ARGS="-l"
+
+#Don't start lircmd even if there seems to be a good config file
+#START_LIRCMD=false
+
+#Don't start irexec, even if a good config file seems to exist.
+#START_IREXEC=false
+
+#Try to load appropriate kernel modules
+LOAD_MODULES=false
+
+# Run "lircd --driver=help" for a list of supported drivers.
+DRIVER="default"
+# usually /dev/lirc0 is the correct setting for systems using udev 
+DEVICE="/dev/lirc0"
+MODULES="lirc_rpi"
+
+# Default configuration files for your hardware if any
+LIRCD_CONF=""
+LIRCMD_CONF=""
+
+(3)If not, update the following lines in /etc/lirc/lirc_options.conf
+driver    = default
+device = /dev/lirc0
+
+(4)Start the LIRC service
+sudo systemctl restart lircd.service
+
+(5)The Hardware is now ready to go! You can add your remote control definitions to lircd.conf. There is also the 'irrecord' tool to record unknown remotes.
