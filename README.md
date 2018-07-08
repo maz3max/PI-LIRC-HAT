@@ -1,5 +1,5 @@
 # Raspberry PI LIRC HAT #
-##Now, you can control everything with an infrared remote with your Raspberry Pi!##
+## Now, you can control everything with an infrared remote with your Raspberry Pi! ##
 
 This an extension PCB for Raspberry PIs with 40 Pins.
 
