@@ -39,4 +39,4 @@ After that, you have to install lirc on the Raspberry. This is documented in pi-
 
 You can also find this in /proc/device-tree/hat/custom_0, because it is included in the eeprom! :D
 
-The design with the 4 IR leds is inspired by [TV-B-Gone](https://learn.adafruit.com/tv-b-gone-kit/overview). The driver overlay is from the [Raspberry Pi Kernel source tree](https://github.com/raspberrypi/linux) with slight modifications. The PCB was designed using [KiCAD](http://kicad-pcb.org/).
+The design with the 4 IR leds is inspired by [TV-B-Gone](https://learn.adafruit.com/tv-b-gone-kit/overview). The driver overlay is from the [Raspberry Pi Kernel source tree](https://github.com/raspberrypi/linux) with slight modifications. The PCB was designed using [KiCAD](http://kicad-pcb.org/). I used a template for the PCB design which can be found [here](https://github.com/xesscorp/RPi_Hat_Template)
