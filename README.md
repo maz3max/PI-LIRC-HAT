@@ -23,7 +23,7 @@ To build it, you need:
 * 1x 330R 0603 SMD resistor
 * 2x 1k 0603 SMD resistor
 * 2x 3.9k 0603 SMD resistor
-* 1x Pin-Header 0.1" pitch 2x20 pins (at least 8mm height)
+* 1x Pin-Header 0.1" pitch 2x20 pins (at least 8mm high)
 
 After soldering it all together, you have to generate and write content on the ID eeprom. Its purpose is to load the driver when your Raspberry Pi boots.
 
@@ -31,7 +31,7 @@ To achieve this, follow these steps:
 
 1. compile the tools in pi-lirc-hat/eepromutils with ```make```
 2. use ```./eepmake eeprom_settings.txt lircHAT.eep lirc-rpi-overlay.dtbo -c setup-readme-blob``` to compile the eeprom content
-3. connect the eeprom the I2C-Pins of a Raspberry (NOT the ID-SCL, ID-SDA pins)
+3. connect the eeprom to the I2C-Pins of a Raspberry (NOT the ID-SCL, ID-SDA pins)
 4. read on how to use eepflash with ```./eepflash.sh -h```
 5. use eepflash to write the content to the ID eeprom, e.g.:```./eepflash.sh -w -f=lircHAT.eep -t=24c32 -d=1 -a=50```
 
